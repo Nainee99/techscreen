@@ -86,9 +86,6 @@ export default function Home() {
                 View and join your scheduled interviews
               </p>
             </div>
-            <Button onClick={() => router.push("/interviews")}>
-              View All <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </Button>
           </div>
 
           {interviews === undefined ? (
