@@ -106,7 +106,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 📞 Contact
-For questions or feedback, please contact [Your Name](mailto:hasnainarif571.com) or visit [GitHub](https://github.com/Nainee99).
+For questions or feedback, please contact [Hasnain](mailto:hasnainarif571.com) or visit [Nainee99](https://github.com/Nainee99).
 
 ---
 

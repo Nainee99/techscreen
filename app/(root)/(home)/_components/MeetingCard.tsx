@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { format } from "date-fns";
 import { CalendarIcon, UserIcon } from "lucide-react";
-// import useMeetingActions from "@/hooks/useMeetingActions";
+import useMeetingActions from "@/lib/hooks/useMeetingActions";
 import type { Doc } from "@/convex/_generated/dataModel";
-// import { getMeetingStatus } from "@/lib/utils";
+import { getMeetingStatus } from "@/lib/utils";
 import {
   Card,
   CardContent,
@@ -17,9 +17,9 @@ import { Button } from "@/components/ui/button";
 type Interview = Doc<"interviews">;
 
 export function MeetingCard({ interview }: { interview: Interview }) {
-//   const { joinMeeting } = useMeetingActions();
+  const { joinMeeting } = useMeetingActions();
 
-//   const status = getMeetingStatus(interview);
+  const status = getMeetingStatus(interview);
   const formattedDate = format(
     new Date(interview.startTime),
     "EEEE, MMMM d · h:mm a"
@@ -69,18 +69,17 @@ export function MeetingCard({ interview }: { interview: Interview }) {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <UserIcon className="h-4 w-4" />
-              {/* {interview.participants.length} Participant(s) */}
+              Participant(s)
             </div>
             <div className="text-sm font-medium text-primary">
               {format(new Date(interview.startTime), "h:mm a")} -{" "}
-              {/* {format(new Date(interview.endTime), "h:mm a")} */}
             </div>
           </div>
 
           {status === "live" && (
             <Button
               className="w-full"
-            //   onClick={() => joinMeeting(interview.streamCallId)}
+              onClick={() => joinMeeting(interview.streamCallId)}
             >
               Join Meeting
             </Button>
@@ -102,4 +101,3 @@ export function MeetingCard({ interview }: { interview: Interview }) {
     </motion.div>
   );
 }
-

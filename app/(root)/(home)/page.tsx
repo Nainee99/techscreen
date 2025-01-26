@@ -6,7 +6,6 @@ import { useQuery } from "convex/react";
 import { Loader2Icon, ArrowRightIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { api } from "../../../convex/_generated/api";
-// import { useUserRole } from "@/hooks/useUserRole"
 import { useUserRole } from "@/lib/hooks/useUserRole";
 import { ActionCard } from "./_components/ActionCard";
 import { MeetingCard } from "./_components/MeetingCard";
